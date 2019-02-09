@@ -6,4 +6,4 @@ api = TwitterApi()
 
 api.timeline()
 #api.tweetStream("BTC")
-print('------End--------------')
+print('------End-------------')
