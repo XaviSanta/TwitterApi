@@ -1,6 +1,6 @@
 # TwitterApi
 
-Twitter functions to do things 
+Functions to work with the Twitter API
 
 # What I learned
 
