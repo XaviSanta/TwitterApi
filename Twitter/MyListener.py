@@ -21,7 +21,7 @@ class MyListener(StreamListener):
 
     def on_data(self,data):
         try:
-            with open('Output.json','a') as f:
+            with open('Output.json','w') as f:
                 if 'lang' in data:
                     if json.loads(data)['lang'] == 'en':
 
@@ -29,7 +29,8 @@ class MyListener(StreamListener):
                         sentiment = text.sentiment
                         self.polarity += text.sentiment.polarity
                         self.subjectivity += text.sentiment.subjectivity
-
+                        print(json.loads(data)['text'])
+                        print('-----')
                         f.write(data)
                         self.num_tweets += 1
 
